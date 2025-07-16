@@ -1,4 +1,4 @@
-name: Read hello.txt on Push
+name: Read Hello File
 
 on:
   push:
@@ -8,14 +8,10 @@ on:
 jobs:
   read-file:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout the code
         uses: actions/checkout@v3
-        - name: Checkout repository
-          uses: actions/checkout@v3
 
-           - name: Show hello.txt content
-        run: |
-          echo "Reading file..."
-          cat hello.txt
-
+      - name: Display contents of hello.txt
+        run: cat hello.txt
